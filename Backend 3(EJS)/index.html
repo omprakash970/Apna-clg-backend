@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRAFTON - Create and Connect the World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            color: white;
+            background-color: #000;
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff3c00;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 15px;
+        }
+
+        .language-selector a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        /* Section Styles */
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .text-content {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .text-content h1 {
+            font-size: 6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-content p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Specific Section Styles */
+        #create {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        }
+
+        #connect {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        }
+
+        #the-world {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        }
+
+        #original {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        }
+
+        #the {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .text-content h1 {
+                font-size: 3rem;
+            }
+
+            .text-content p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">KRAFTON</div>
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#">Studios</a>
+            <a href="#">Games</a>
+            <a href="#">More Experience</a>
+            <a href="#">Careers</a>
+            <a href="#">IR</a>
+            <a href="#">CSR</a>
+            <a href="#">News</a>
+        </div>
+        <div class="language-selector">
+            <a href="#">KO</a>
+            <a href="#">EN</a>
+            <a href="#">ON</a>
+            <a href="#">JP</a>
+        </div>
+    </nav>
+
+    <!-- Sections with Video Backgrounds -->
+    <section id="create">
+        <video class="video-bg" autoplay muted loop>
+            <source src="https://assets.codepen.io/3364143/720.mp4" type="video/mp4">
+        </video>
+        <div class="text-content">
+            <h1>CREATE</h1>
+            <p>Crafting immersive experiences that push the boundaries of gaming</p>
+        </div>
+    </section>
+
+    <section id="connect">
+        <video class="video-bg" autoplay muted loop>
+            <source src="https://assets.codepen.io/3364143/720.mp4" type="video/mp4">
+        </video>
+        <div class="text-content">
+            <h1>CONNECT</h1>
+            <p>Bringing players together across the globe through shared experiences</p>
+        </div>
+    </section>
+
+    <section id="the-world">
+        <video class="video-bg" autoplay muted loop>
+            <source src="https://assets.codepen.io/3364143/720.mp4" type="video/mp4">
+        </video>
+        <div class="text-content">
+            <h1>THE WORLD</h1>
+            <p>Building expansive worlds that captivate and inspire millions</p>
+        </div>
+    </section>
+
+    <section id="original">
+        <video class="video-bg" autoplay muted loop>
+            <source src="https://assets.codepen.io/3364143/720.mp4" type="video/mp4">
+        </video>
+        <div class="text-content">
+            <h1>ORIGINAL</h1>
+            <p>Pioneering new genres and gameplay experiences</p>
+        </div>
+    </section>
+
+    <section id="the">
+        <video class="video-bg" autoplay muted loop>
+            <source src="https://assets.codepen.io/3364143/720.mp4" type="video/mp4">
+        </video>
+        <div class="text-content">
+            <h1>THE</h1>
+            <p>Defining the future of interactive entertainment</p>
+        </div>
+    </section>
+
+    <script>
+        // Simple scroll animation for text elements
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelector('.text-content').style.opacity = 1;
+                        entry.target.querySelector('.text-content').style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => {
+                const textContent = section.querySelector('.text-content');
+                textContent.style.opacity = 0;
+                textContent.style.transform = 'translateY(50px)';
+                textContent.style.transition = 'opacity 1s, transform 1s';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
