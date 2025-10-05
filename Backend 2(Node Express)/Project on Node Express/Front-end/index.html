@@ -84,7 +84,16 @@
 
         function addTodo() {
             let value = document.getElementById('todo-input');
-            console.log(value.value);
+            let text = value.value.trim();
+            fetch('https://localhost:3000/add-item', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+
+                },
+                body: JSON.stringify({ text })
+
+            })
         }
 
 

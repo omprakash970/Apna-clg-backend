@@ -8,7 +8,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/add-item', (req, res) => {
-    console.log(req);
+    console.log(req.body);
+    res.send("Item added");
 
 })
 
