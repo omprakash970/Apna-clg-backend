@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express();
 const port = 3000;
+
 const path = require('path');
 router.use(express.urlencoded({ extended: true }));
 
@@ -16,7 +17,8 @@ router.get("/", (req, res) => {
 
 router.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
-    // You can add additional startup logic here
+    console.log('This is listening to the port ${port}')
+
     console.log("Server started successfully");
 
 });
