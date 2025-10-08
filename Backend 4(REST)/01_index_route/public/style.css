@@ -1,0 +1,20 @@
+h1 {
+    color: salmon;
+}
+
+.post {
+    background-color: lime;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: blue;
+}
+
+.content {
+    margin-top: 5px;
+}

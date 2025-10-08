@@ -27,8 +27,9 @@ let posts = [
 
 
 router.get("/", (req, res) => {
-    res.send("lavada, bonga em kadu 🤣");
+    res.render("index.ejs", { posts });
 });
+
 
 router.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
