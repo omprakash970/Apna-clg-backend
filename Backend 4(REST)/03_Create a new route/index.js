@@ -28,6 +28,17 @@ router.get("/posts", (req, res) => {
     res.render("index.ejs", { posts });
 
 });
+router.get("/posts/new", (req, res) => {
+    res.render("new.ejs");
+});
+router.post("/posts", (req, res) => {
+    console.log(req.body);
+    const { username, content } = req.body;
+
+
+});
+
+
 router.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
     console.log(`This is listening to the port ${port}`)
