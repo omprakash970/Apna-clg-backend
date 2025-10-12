@@ -8,8 +8,6 @@ router.use(express.urlencoded({ extended: true }));
 router.set('view engine', 'ejs');
 router.set('views', path.join(__dirname, 'views'));
 router.use(express.static(path.join(__dirname, 'public')));
-
-
 let posts = [
     {
         username: "Oppie",
