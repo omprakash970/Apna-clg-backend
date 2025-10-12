@@ -12,14 +12,17 @@ router.use(express.static(path.join(__dirname, "public")));
 
 let posts = [
     {
+        id: "1a",
         username: "Om Prakash",
         context: "I love nancy"
     },
     {
+        id: "2a",
         username: "Nancy",
         context: "I love Om"
     },
     {
+        id: "2c",
         username: "John",
         context: "I love Jane"
     },
@@ -36,7 +39,15 @@ router.get("/posts/new", (req, res) => {
 });
 router.post("/posts", (req, res) => {
     const { username, context } = req.body;
+    console.log(req.body);
     posts.push({ username, context });
+    res.redirect("/posts");
+
+});
+router.get("/posts/:id", (req, res) => {
+    const { id } = req.params;
+    let post = posts.find((p) => p.id === id);
+    res.render('show.ejs', { post });
 
 });
 router.listen(port, () => {
