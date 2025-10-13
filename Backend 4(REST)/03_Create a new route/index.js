@@ -1,56 +1,50 @@
 const express = require("express");
-const router = express();
+const app = express();
 const port = 3000;
-const path = require('path');
+const path = require("path");
+const { v4: uuidv4 } = require("uuid"); // ✅ Correct import
 
-router.use(express.urlencoded({ extended: true }));
+// Middleware
+app.use(express.urlencoded({ extended: true }));
 
-router.set("view engine", "ejs");
-router.set("views", path.join(__dirname, "views"));
+// View engine setup
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
-router.use(express.static(path.join(__dirname, "public")));
+// Static files
+app.use(express.static(path.join(__dirname, "public")));
 
+// Sample posts
 let posts = [
-    {
-        id: "1a",
-        username: "Om Prakash",
-        context: "I love nancy"
-    },
-    {
-        id: "2a",
-        username: "Nancy",
-        context: "I love Om"
-    },
-    {
-        id: "2c",
-        username: "John",
-        context: "I love Jane"
-    },
-    {
-        username: "Jane",
-        context: "I love John"
-    }
+    { id: uuidv4(), username: "Om Prakash", context: "I love Nancy" },
+    { id: uuidv4(), username: "Nancy", context: "I love Om" },
+    { id: uuidv4(), username: "John", context: "I love Jane" },
+    { id: uuidv4(), username: "Jane", context: "I love John" }
 ];
-router.get("/posts", (req, res) => {
-    res.render('index.ejs', { posts });
+
+// Routes
+app.get("/posts", (req, res) => {
+    res.render("index.ejs", { posts });
 });
-router.get("/posts/new", (req, res) => {
-    res.render('new.ejs');
+
+app.get("/posts/new", (req, res) => {
+    res.render("new.ejs");
 });
-router.post("/posts", (req, res) => {
+
+app.post("/posts", (req, res) => {
     const { username, context } = req.body;
-    console.log(req.body);
-    posts.push({ username, context });
+    const id = uuidv4();
+    posts.push({ id, username, context });
     res.redirect("/posts");
-
 });
-router.get("/posts/:id", (req, res) => {
+
+app.get("/posts/:id", (req, res) => {
     const { id } = req.params;
-    let post = posts.find((p) => p.id === id);
-    res.render('show.ejs', { post });
-
-});
-router.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    const post = posts.find(p => p.id === id);
+    res.render("show.ejs", { post });
 });
 
+// Server start
+app.listen(port, () => {
+    console.log(`🔥 Server running at: http://localhost:${port}`);
+});
