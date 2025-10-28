@@ -38,7 +38,7 @@ RESTful API development:
 3. **03_Create a new route/** - Advanced routing patterns
 4. **index.js** - Main REST API server
 
-### **Miscellaneous**
+### **Miscllineous**
 Additional examples and resources:
 - **Backend/** - Server-side examples with CORS support
 - **Frontend/** - Frontend integration examples
@@ -49,6 +49,7 @@ Additional examples and resources:
 - **Express.js** (v5.1.0) - Web application framework
 - **EJS** (v3.1.10) - Embedded JavaScript templating
 - **Nodemon** (v3.1.10) - Development tool for auto-reloading
+- **Nodeman** (v1.1.2) - Additional Node.js utility
 - **CORS** - Cross-Origin Resource Sharing middleware
 
 ## 🚀 Getting Started
