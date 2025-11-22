@@ -14,7 +14,6 @@ app.set("views", path.join(__dirname, "views"));
 // Static files
 app.use(express.static(path.join(__dirname, "public")));
 
-// Sample posts
 let posts = [
     { id: uuidv4(), username: "Om Prakash", context: "I love Nancy" },
     { id: uuidv4(), username: "Nancy", context: "I love Om" },
