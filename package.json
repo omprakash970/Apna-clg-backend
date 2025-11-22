@@ -1,18 +1,28 @@
 {
+  "name": "apna-college",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000A\u0000p\u0000n\u0000a\u0000-\u0000c\u0000l\u0000g\u0000-\u0000b\u0000a\u0000c\u0000k\u0000e\u0000n\u0000d\u0000\r\u0000 \u0000",
+  "keywords": [],
+  "homepage": "https://github.com/omprakash970/Apna-clg-backend#readme",
+  "bugs": {
+    "url": "https://github.com/omprakash970/Apna-clg-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omprakash970/Apna-clg-backend.git"
+  },
+  "license": "ISC",
+  "author": "Oppie",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "nodeman": "^1.1.2",
     "nodemon": "^3.1.10"
   },
-  "name": "apna-college",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Oppie",
-  "license": "ISC",
-  "description": ""
+  "devDependencies": {}
 }
