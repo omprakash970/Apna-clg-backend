@@ -1,0 +1,40 @@
+-- Example structure for creating some tables
+DROP TABLE IF EXISTS Customer;
+DROP TABLE IF EXISTS Dealer;
+DROP TABLE IF EXISTS Vehicle;
+
+
+CREATE TABLE Vehicle (
+    veh_id INT PRIMARY KEY,
+    veh_type VARCHAR(20),
+    veh_name VARCHAR(30),
+    veh_number VARCHAR(20)
+);
+
+CREATE TABLE Dealer (
+    deal_id INT PRIMARY KEY,
+    deal_name VARCHAR(30),
+    city VARCHAR(30),
+    street VARCHAR(30),
+    state VARCHAR(20),
+    pincode INT,
+    d_no INT,
+    ph_int VARCHAR(15)
+);
+
+CREATE TABLE Customer (
+    cust_id INT PRIMARY KEY,
+    cust_name VARCHAR(30),
+    dob DATE,
+    city VARCHAR(30),
+    street VARCHAR(30),
+    state VARCHAR(30),
+    pincode INT,
+    ph_no VARCHAR(15),
+    deal_no INT REFERENCES Dealer(deal_id),
+    photo_identity CHAR(1),
+    v_id INT REFERENCES Vehicle(veh_id)
+);
+
+
+-- Similarly create Edu_Bus, Branch, Renewal, Registration, Contract_Permission
