@@ -9,8 +9,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/rolldice', (req, res) => {
-    res.render("rolldice.ejs");
-
+   
 });
 app.listen(port, () => {
     console.log("listening to the port 3000");
