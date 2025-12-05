@@ -12,3 +12,18 @@ let createRandomUser =  ()=> {
 }
 
 console.log(createRandomUser());
+const mysql = require('mysql2');
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user:'root',
+    password: 'Nancy123abc@', 
+    database:'mydb'
+});
+connection.query(" SELECT * FROM Students ", (err, results, fields) => {
+    if (err) {
+        console.error('Error executing query:', err);
+        return;
+    }   
+    console.log('Query results:', results);
+});
+connection.end();
